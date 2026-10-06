@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>抖拾光 · 隐私与联系</title>
+  <link rel="stylesheet" href="support.css">
+</head>
+<body>
+  <div class="page">
+    <header class="page-head">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">拾</span>
+        <div class="brand-text">
+          <h1>抖拾光</h1>
+          <p class="subtitle">隐私与使用说明 · 联系作者</p>
+        </div>
+      </div>
+      <span class="version" id="app-version" hidden></span>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="支持页分区">
+      <a class="tab is-active" id="tab-privacy" role="tab" href="#privacy"
+         aria-controls="panel-privacy" aria-selected="true">隐私与使用说明</a>
+      <a class="tab" id="tab-contact" role="tab" href="#contact"
+         aria-controls="panel-contact" aria-selected="false" tabindex="-1">联系作者</a>
+    </nav>
+
+    <main class="panels">
+      <section class="panel" id="panel-privacy" role="tabpanel" aria-labelledby="tab-privacy">
+        <article class="card">
+          <h2 class="card-title">抖拾光 隐私与使用说明</h2>
+          <p class="card-meta">更新日期：2026-10-06</p>
+
+          <div class="facts">
+            <div class="fact">
+              <h3>读取哪些数据</h3>
+              <p>使用账号识别、扫描和下载功能时，读取当前已登录抖音账号的 UID、昵称，所选收藏夹 / 关注博主信息，以及作品的标题、作者与媒体地址，用于归档和本地浏览。</p>
+            </div>
+
+            <div class="fact">
+              <h3>登录会话</h3>
+              <p>抖音同源请求由浏览器自动携带已有登录会话。不主动提取或保存登录认证 Cookie，不将它们发送给开发者，不抓取登录密码或手机号。页面代码会临时读取 UIFID 与媒体能力等非认证 Cookie 参数，用于抖音同源请求，不持久化。</p>
+            </div>
+
+            <div class="fact">
+              <h3>本地保存</h3>
+              <p>设置、目录句柄、按账号分离的归档记录与有上限的诊断日志，都只保存在你的浏览器和所选文件夹内。</p>
+            </div>
+
+            <div class="fact">
+              <h3>网络连接</h3>
+              <p>扫描与下载通过 HTTPS 连接抖音及媒体 CDN，不向开发者服务器上传归档数据；没有遥测、广告或数据出售。你主动打开原作品、作者主页或联系入口时，会访问对应第三方服务。</p>
+            </div>
+
+            <div class="fact">
+              <h3>可选 CDN 与请求头</h3>
+              <p>可选的 CDN 访问与 declarativeNetRequestWithHostAccess 仅为你自己的下载补上 Referer；头部规则不读取 Cookie 或请求体。</p>
+            </div>
+
+            <div class="fact full">
+              <h3>权限用途</h3>
+              <p>storage 保存本地状态；抖音网站访问、activeTab + scripting 用于页面识别与读取；downloads 用于图片及实况片段“另存为”；经你授权的文件夹句柄用于媒体、数据和日志的读写与删除。Chrome 的 Allow access to file URLs 开关用于 本地库.html 桥接；文件删除需要校验账号和本地授权标记，并由扩展确认窗口批准。</p>
+            </div>
+
+            <div class="fact full">
+              <h3>清除与永久删除</h3>
+              <p>清除记录 ≠ 删除文件；经确认的永久删除只处理所选已记录的文件与记录，不涉及旧日志、备份或副本。遗忘目录或移除扩展不会删除已保存到磁盘的文件。</p>
+            </div>
+
+            <div class="fact full">
+              <h3>诊断日志</h3>
+              <p>日志自动记录操作步骤、权限检查、扫描、下载与错误信息，数量和长度有上限。诊断会脱敏 Cookie、签名、完整资源 URL 和查询串，不记录原始响应正文；导出的日志仍可能包含账号 / 作品 ID、名称和文件路径，分享前请自行检查。</p>
+            </div>
+
+            <div class="fact">
+              <h3>联系入口</h3>
+              <p>联系入口仅在手动点击时打开，不会自动上传日志或 UID。</p>
+            </div>
+
+            <div class="fact">
+              <h3>使用责任</h3>
+              <p>仅在你有权处理、已获授权的内容上使用；请勿绕过私密内容、付费墙或 DRM。本扩展与抖音没有隶属关系；页面标记无效并不代表可确定作品被删除或隐藏的确切原因。</p>
+            </div>
+
+            <div class="fact full">
+              <h3>数据保留与控制</h3>
+              <p>归档文件和记录保留至你主动清理；浏览器内诊断日志超出上限会淘汰旧条目。请妥善保管本地 HTML、数据和日志，它们可能包含个人收藏信息。开发者没有远程删除你本地文件的渠道。</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" hidden>
+        <article class="card">
+          <h2 class="card-title">联系作者</h2>
+          <p class="card-meta">反馈问题或提出建议</p>
+
+          <p class="contact-status is-empty" id="contact-status" role="status"></p>
+
+          <ul class="contact-links">
+            <li id="contact-email-item" hidden>
+              <span class="contact-label">邮件</span>
+              <a class="contact-value" id="contact-email"></a>
+            </li>
+            <li id="contact-issues-item" hidden>
+              <span class="contact-label">问题反馈</span>
+              <a class="contact-value" id="contact-issues" target="_blank" rel="noopener noreferrer"></a>
+            </li>
+          </ul>
+
+          <p class="contact-hint">联络时可描述操作和错误；不要发送 Cookie、密码或完整请求。日志请自行检查后再分享。</p>
+          <details class="contact-note"><summary>作者配置</summary><p>在 <code>support-config.js</code> 中填写邮箱或 GitHub Issues 地址即可接通联系入口。</p></details>
+        </article>
+      </section>
+    </main>
+
+    <footer class="page-foot">
+      <p>本页脚本不会自动发起网络请求，也不会上传任何数据。</p>
+    </footer>
+  </div>
+
+  <script src="support-config.js" defer></script>
+  <script src="support.js" defer></script>
+</body>
+</html>
